@@ -9,12 +9,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detalle_ventas', function (Blueprint $table) {
-            $table->id(); // ID detalle (PK)
-            $table->foreignId('venta_id') // Pertenece a venta (FK)
+            $table->id(); 
+            $table->foreignId('venta_id') 
                   ->constrained('ventas')
                   ->onDelete('cascade')
                   ->onUpdate('cascade');
-            $table->foreignId('inventario_id') // Producto vendido (FK)
+            $table->foreignId('inventario_id') 
                   ->constrained('inventarios')
                   ->onDelete('restrict')
                   ->onUpdate('cascade');

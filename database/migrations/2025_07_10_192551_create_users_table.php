@@ -52,7 +52,6 @@ return new class extends Migration
         Schema::dropIfExists('sessions');
         Schema::dropIfExists('password_reset_tokens');
         
-        // Eliminar la FK primero antes de eliminar la tabla users
         Schema::table('users', function (Blueprint $table) {
             $table->dropForeign(['rol_id']);
         });

@@ -13,7 +13,6 @@ return new class extends Migration
             $table->string('nombre', 50)->unique();
         });
 
-        // Insertar roles básicos
         DB::table('roles')->insert([
             ['nombre' => 'Administrador'],
             ['nombre' => 'Vendedor'],

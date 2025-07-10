@@ -9,9 +9,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ventas', function (Blueprint $table) {
-            $table->id(); // ID de venta (PK)
+            $table->id(); 
             $table->dateTime('fecha');
-            $table->foreignId('usuario_id') // Registrada por usuario (FK)
+            $table->foreignId('usuario_id') 
                   ->constrained('users')
                   ->onDelete('restrict')
                   ->onUpdate('cascade');

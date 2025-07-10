@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('inventarios', function (Blueprint $table) {
-            $table->id(); // ID del producto (PK)
+            $table->id(); 
             $table->string('nombre', 100);
             $table->integer('stock')->default(0);
             $table->decimal('precio', 10, 2);
